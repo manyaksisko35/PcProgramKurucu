@@ -50,7 +50,7 @@ namespace PcProgramKurucu
         
         private void Form1_Load(object sender, EventArgs e)
         {
-            AutoUpdater.Start("https://raw.githubusercontent.com/manyaksisko35/PcProgramKurucu/master/update.xml?v=1");
+            AutoUpdater.Start("https://raw.githubusercontent.com/manyaksisko35/PcProgramKurucu/master/update.xml");
 
             Dictionary<string, string[]> uygulamalar = new Dictionary<string, string[]>();
             uygulamalar.Add("Google Chrome", new string[] { "Google.Chrome", "google.com" });
