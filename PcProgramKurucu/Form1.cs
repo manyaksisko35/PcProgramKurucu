@@ -11,6 +11,7 @@ using LiveCharts.WinForms;
 using LibreHardwareMonitor.Hardware;
 using System.IO;
 using System.Runtime.InteropServices;
+using AutoUpdaterDotNET;
 
 namespace PcProgramKurucu
 {
@@ -46,8 +47,11 @@ namespace PcProgramKurucu
                 timerSistem.Tick += timerSistem_Tick;
         }
 
+        
         private void Form1_Load(object sender, EventArgs e)
         {
+            AutoUpdater.Start("https://raw.githubusercontent.com/manyaksisko35/PcProgramKurucu/master/update.xml?v=1");
+
             Dictionary<string, string[]> uygulamalar = new Dictionary<string, string[]>();
             uygulamalar.Add("Google Chrome", new string[] { "Google.Chrome", "google.com" });
             uygulamalar.Add("Mozilla Firefox", new string[] { "Mozilla.Firefox", "firefox.com" });
