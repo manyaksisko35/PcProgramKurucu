@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtArama = new Guna.UI2.WinForms.Guna2TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblSagDurum = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@
             this.btnDestekOl = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtArama = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSagLogo)).BeginInit();
@@ -72,6 +72,7 @@
             this.guna2BorderlessForm1.BorderRadius = 20;
             this.guna2BorderlessForm1.ContainerControl = this;
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.ResizeForm = false;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
             // guna2Panel1
@@ -91,6 +92,30 @@
             this.guna2Panel1.ShadowDecoration.Enabled = true;
             this.guna2Panel1.Size = new System.Drawing.Size(570, 523);
             this.guna2Panel1.TabIndex = 1;
+            // 
+            // txtArama
+            // 
+            this.txtArama.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtArama.BorderRadius = 10;
+            this.txtArama.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtArama.DefaultText = "";
+            this.txtArama.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtArama.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtArama.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtArama.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtArama.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.txtArama.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtArama.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtArama.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtArama.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtArama.Location = new System.Drawing.Point(12, 7);
+            this.txtArama.Name = "txtArama";
+            this.txtArama.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.txtArama.PlaceholderText = "Uygulama Ara";
+            this.txtArama.SelectedText = "";
+            this.txtArama.Size = new System.Drawing.Size(543, 25);
+            this.txtArama.TabIndex = 1;
+            this.txtArama.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 
             // flowLayoutPanel1
             // 
@@ -318,6 +343,7 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Pc Program Yükleyici - Hasan Alp Güngör";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
             // 
             // guna2Panel4
             // 
@@ -387,30 +413,6 @@
             this.label2.Size = new System.Drawing.Size(210, 14);
             this.label2.TabIndex = 7;
             this.label2.Text = "Coded And Designed By Hasan Alp Güngör";
-            // 
-            // txtArama
-            // 
-            this.txtArama.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtArama.BorderRadius = 10;
-            this.txtArama.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtArama.DefaultText = "";
-            this.txtArama.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtArama.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtArama.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtArama.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtArama.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.txtArama.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtArama.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtArama.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtArama.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtArama.Location = new System.Drawing.Point(12, 7);
-            this.txtArama.Name = "txtArama";
-            this.txtArama.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtArama.PlaceholderText = "Uygulama Ara";
-            this.txtArama.SelectedText = "";
-            this.txtArama.Size = new System.Drawing.Size(543, 25);
-            this.txtArama.TabIndex = 1;
-            this.txtArama.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 
             // Form1
             // 

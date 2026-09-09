@@ -10,9 +10,11 @@ using LiveCharts.Wpf;
 using LiveCharts.WinForms;
 using LibreHardwareMonitor.Hardware;
 using System.IO;
+using System.Runtime.InteropServices;
 
 namespace PcProgramKurucu
 {
+
     public partial class Form1 : Form
     {
         Computer bilgisayar;
@@ -22,6 +24,11 @@ namespace PcProgramKurucu
         ChartValues<double> gpuDegerleri = new ChartValues<double>();
         ChartValues<double> hddDegerleri = new ChartValues<double>();
 
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         public Form1()
         {
             InitializeComponent();
@@ -296,6 +303,15 @@ namespace PcProgramKurucu
                 {
                     kart.Visible = false;
                 }
+            }
+        }
+
+        private void label1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(this.Handle, 0x112, 0xf012, 0);
             }
         }
     }
