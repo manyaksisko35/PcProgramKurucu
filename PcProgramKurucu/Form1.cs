@@ -47,7 +47,7 @@ namespace PcProgramKurucu
                 timerSistem.Tick += timerSistem_Tick;
         }
 
-        
+
         private void Form1_Load(object sender, EventArgs e)
         {
             AutoUpdater.Start("https://raw.githubusercontent.com/manyaksisko35/PcProgramKurucu/master/update.xml");
@@ -215,63 +215,6 @@ namespace PcProgramKurucu
                 tiklananButon.Text = "İndir"; tiklananButon.Enabled = true;
                 if (lblSagDurum != null) { lblSagDurum.Text = "Hata Oluştu!"; lblSagDurum.ForeColor = Color.Red; }
                 if (progBar != null) { progBar.Style = ProgressBarStyle.Blocks; progBar.Value = 0; }
-            }
-        }
-
-        private void GomuluExeCalistir()
-        {
-            try
-            {
-                string tempExeYolu = Path.Combine(Path.GetTempPath(), "setup.exe");
-
-                File.WriteAllBytes(tempExeYolu, Properties.Resources.setup);
-
-                Process.Start(tempExeYolu);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Setup çalıştırılamadı: " + ex.Message);
-            }
-        }
-
-        private void BatKodunuCalistir(string batIcerigi)
-        {
-            try
-            {
-                string batYolu = Path.Combine(Path.GetTempPath(), "gizli_islem.bat");
-                File.WriteAllText(batYolu, batIcerigi);
-
-                Process islem = new Process();
-                islem.StartInfo.FileName = batYolu;
-                islem.StartInfo.UseShellExecute = true;
-                islem.StartInfo.Verb = "runas";
-                islem.Start();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("İşlem başlatılamadı: " + ex.Message);
-            }
-        }
-
-        private void BatKodunuCalistir(string batIcerigi, string parametre = "")
-        {
-            try
-            {
-                string batYolu = Path.Combine(Path.GetTempPath(), "gizli_islem.bat");
-                File.WriteAllText(batYolu, batIcerigi);
-
-                Process islem = new Process();
-                islem.StartInfo.FileName = batYolu;
-                islem.StartInfo.Arguments = parametre;
-                islem.StartInfo.UseShellExecute = true;
-                islem.StartInfo.Verb = "runas";
-                islem.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                islem.Start();
-                islem.WaitForExit();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("İşlem başlatılamadı: " + ex.Message);
             }
         }
 

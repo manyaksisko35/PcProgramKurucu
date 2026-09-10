@@ -59,25 +59,5 @@ namespace PcProgramKurucu.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   System.Byte[] türünde yerelleştirilmiş bir kaynak arar.
-        /// </summary>
-        public static byte[] aktivasyon {
-            get {
-                object obj = ResourceManager.GetObject("aktivasyon", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Byte[] türünde yerelleştirilmiş bir kaynak arar.
-        /// </summary>
-        public static byte[] setup {
-            get {
-                object obj = ResourceManager.GetObject("setup", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
     }
 }
