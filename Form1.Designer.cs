@@ -33,7 +33,6 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.txtArama = new Guna.UI2.WinForms.Guna2TextBox();
-            this.uygulamaListesi = new PcProgramKurucu.UygulamaListesi();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblSagDurum = new System.Windows.Forms.Label();
             this.progBar = new Guna.UI2.WinForms.Guna2ProgressBar();
@@ -57,6 +56,7 @@
             this.btnDestekOl = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.uygulamaListesi = new PcProgramKurucu.UygulamaListesi();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSagLogo)).BeginInit();
@@ -90,7 +90,7 @@
             this.guna2Panel1.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.guna2Panel1.ShadowDecoration.Depth = 60;
             this.guna2Panel1.ShadowDecoration.Enabled = true;
-            this.guna2Panel1.Size = new System.Drawing.Size(606, 523);
+            this.guna2Panel1.Size = new System.Drawing.Size(597, 523);
             this.guna2Panel1.TabIndex = 1;
             // 
             // txtArama
@@ -113,17 +113,9 @@
             this.txtArama.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.txtArama.PlaceholderText = "Uygulama Ara";
             this.txtArama.SelectedText = "";
-            this.txtArama.Size = new System.Drawing.Size(579, 25);
+            this.txtArama.Size = new System.Drawing.Size(568, 25);
             this.txtArama.TabIndex = 1;
             this.txtArama.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
-            // 
-            // uygulamaListesi
-            // 
-            this.uygulamaListesi.BackColor = System.Drawing.Color.Transparent;
-            this.uygulamaListesi.Location = new System.Drawing.Point(12, 35);
-            this.uygulamaListesi.Name = "uygulamaListesi";
-            this.uygulamaListesi.Size = new System.Drawing.Size(579, 468);
-            this.uygulamaListesi.TabIndex = 0;
             // 
             // guna2Panel2
             // 
@@ -136,7 +128,7 @@
             this.guna2Panel2.Controls.Add(this.lblSagAd);
             this.guna2Panel2.Controls.Add(this.picSagLogo);
             this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.guna2Panel2.Location = new System.Drawing.Point(667, 52);
+            this.guna2Panel2.Location = new System.Drawing.Point(633, 52);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.BorderRadius = 20;
             this.guna2Panel2.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -180,6 +172,7 @@
             // 
             // picSagLogo
             // 
+            this.picSagLogo.FillColor = System.Drawing.Color.Transparent;
             this.picSagLogo.ImageRotate = 0F;
             this.picSagLogo.Location = new System.Drawing.Point(41, 13);
             this.picSagLogo.Name = "picSagLogo";
@@ -204,7 +197,7 @@
             this.guna2Panel3.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel3.Controls.Add(this.chartCPU);
             this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.guna2Panel3.Location = new System.Drawing.Point(667, 325);
+            this.guna2Panel3.Location = new System.Drawing.Point(633, 325);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.ShadowDecoration.BorderRadius = 20;
             this.guna2Panel3.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -218,9 +211,9 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Impact", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(258, 178);
+            this.label3.Location = new System.Drawing.Point(261, 178);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 23);
+            this.label3.Size = new System.Drawing.Size(85, 23);
             this.label3.TabIndex = 8;
             this.label3.Text = "x";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -316,7 +309,7 @@
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(992, -2);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(957, -2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(40, 28);
             this.guna2ControlBox1.TabIndex = 4;
@@ -327,7 +320,7 @@
             this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(952, -2);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(917, -2);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(40, 28);
             this.guna2ControlBox2.TabIndex = 5;
@@ -354,7 +347,7 @@
             this.guna2Panel4.Controls.Add(this.btnDestekOl);
             this.guna2Panel4.Controls.Add(this.guna2Button4);
             this.guna2Panel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.guna2Panel4.Location = new System.Drawing.Point(861, 52);
+            this.guna2Panel4.Location = new System.Drawing.Point(827, 52);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.ShadowDecoration.BorderRadius = 20;
             this.guna2Panel4.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -408,11 +401,19 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.Silver;
-            this.label2.Location = new System.Drawing.Point(803, 586);
+            this.label2.Location = new System.Drawing.Point(778, 584);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(210, 14);
             this.label2.TabIndex = 7;
             this.label2.Text = "Coded And Designed By Hasan Alp Güngör";
+            // 
+            // uygulamaListesi
+            // 
+            this.uygulamaListesi.BackColor = System.Drawing.Color.Transparent;
+            this.uygulamaListesi.Location = new System.Drawing.Point(12, 35);
+            this.uygulamaListesi.Name = "uygulamaListesi";
+            this.uygulamaListesi.Size = new System.Drawing.Size(568, 468);
+            this.uygulamaListesi.TabIndex = 0;
             // 
             // Form1
             // 
@@ -421,7 +422,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1031, 607);
+            this.ClientSize = new System.Drawing.Size(996, 607);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.guna2Panel4);
             this.Controls.Add(this.label1);

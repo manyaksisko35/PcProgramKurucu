@@ -69,20 +69,19 @@ namespace PcProgramKurucu
             // ---- Tarayıcılar ----
             uygulamalar.Add("Google Chrome", new string[] { "Google.Chrome", "google.com" });
             uygulamalar.Add("Mozilla Firefox", new string[] { "Mozilla.Firefox", "firefox.com" });
-            uygulamalar.Add("Microsoft Edge", new string[] { "Microsoft.Edge", "microsoft.com" });
+            uygulamalar.Add("Microsoft Edge", new string[] { "Microsoft.Edge", "explore.microsoft.com/tr-tr/edge/features" });
             uygulamalar.Add("Opera", new string[] { "Opera.Opera", "opera.com" });
             uygulamalar.Add("Brave", new string[] { "BraveSoftware.BraveBrowser", "brave.com" });
             uygulamalar.Add("Tor Browser", new string[] { "TorProject.TorBrowser", "torproject.org" });
 
             // ---- İletişim ----
             uygulamalar.Add("Discord", new string[] { "Discord.Discord", "discord.com" });
-            uygulamalar.Add("WhatsApp", new string[] { "9NKSQGP7F2NH", "whatsapp.com" });
+            uygulamalar.Add("WhatsApp", new string[] { "9NKSQGP7F2NH", "whatsappbusiness.com" });
             uygulamalar.Add("Telegram", new string[] { "Telegram.TelegramDesktop", "telegram.org" });
             uygulamalar.Add("Signal", new string[] { "Signal.Signal", "signal.org" });
             uygulamalar.Add("Slack", new string[] { "SlackTechnologies.Slack", "slack.com" });
             uygulamalar.Add("Zoom", new string[] { "Zoom.Zoom", "zoom.us" });
-            uygulamalar.Add("Microsoft Teams", new string[] { "Microsoft.Teams", "microsoft.com" });
-            uygulamalar.Add("Skype", new string[] { "Microsoft.Skype", "skype.com" });
+            uygulamalar.Add("Microsoft Teams", new string[] { "Microsoft.Teams", "skype.com" });
 
             // ---- Müzik / Medya ----
             uygulamalar.Add("Spotify", new string[] { "Spotify.Spotify", "spotify.com" });
@@ -99,11 +98,11 @@ namespace PcProgramKurucu
             uygulamalar.Add("Steam", new string[] { "Valve.Steam", "steampowered.com" });
             uygulamalar.Add("Epic Games Launcher", new string[] { "EpicGames.EpicGamesLauncher", "epicgames.com" });
             uygulamalar.Add("GOG Galaxy", new string[] { "GOG.Galaxy", "gog.com" });
-            uygulamalar.Add("EA app", new string[] { "ElectronicArts.EADesktop", "ea.com" });
+            uygulamalar.Add("EA app", new string[] { "ElectronicArts.EADesktop", "help.ea.com" });
             uygulamalar.Add("Ubisoft Connect", new string[] { "Ubisoft.Connect", "ubisoft.com" });
             uygulamalar.Add("Battle.net", new string[] { "Blizzard.BattleNet", "battle.net" });
             uygulamalar.Add("Minecraft Launcher", new string[] { "Mojang.MinecraftLauncher", "minecraft.net" });
-            uygulamalar.Add("Roblox Studio", new string[] { "Roblox.RobloxStudio", "roblox.com" });
+            uygulamalar.Add("Roblox Studio", new string[] { "Roblox.RobloxStudio", "create.roblox.com" });
             uygulamalar.Add("Unity Hub", new string[] { "Unity.UnityHub", "unity.com" });
 
             // ---- Geliştirici Araçları ----
@@ -186,7 +185,7 @@ namespace PcProgramKurucu
             uygulamaListesi.ListeyiAyarla(ogeler);
             uygulamaListesi.IndirTiklandi += (oge) =>
             {
-                IndirmeyiBaslatBasit(oge.Ad, oge.WingetKodu, oge.Logo);
+                IndirmeyiBaslatBasit(oge.Ad, oge.WingetKodu);
             };
 
             GrafikTasarla(chartCPU, cpuDegerleri, "CPU", System.Windows.Media.Color.FromRgb(17, 125, 187));
@@ -305,10 +304,9 @@ namespace PcProgramKurucu
             catch { }
         }
 
-        public async void IndirmeyiBaslatBasit(string uygulamaAdi, string wingetKodu, Image logo)
+        public async void IndirmeyiBaslatBasit(string uygulamaAdi, string wingetKodu)
         {
             if (lblSagAd != null) lblSagAd.Text = uygulamaAdi;
-            if (picSagLogo != null && logo != null) picSagLogo.Image = logo; // EKLENDİ - önceden hiç set edilmiyordu
             if (lblSagDurum != null) { lblSagDurum.Text = "İndiriliyor ve Kuruluyor..."; lblSagDurum.ForeColor = Color.Goldenrod; }
             if (progBar != null) { progBar.Value = 0; progBar.Style = ProgressBarStyle.Marquee; }
 
